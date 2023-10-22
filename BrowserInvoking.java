@@ -1,5 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserInvoking {
 
@@ -15,7 +17,10 @@ public class BrowserInvoking {
 		// hence we will use Webdriver as common interface which will have methods
 		// which will be there across multilple browsers
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(); // invoke chromedriver
+		// WebDriver driver = new FirefoxDriver(); // invoke firefox driver
+		// WebDriver driver = new EdgeDriver();// invoke edgedriver
+
 		driver.get("https://www.espncricinfo.com/");
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
